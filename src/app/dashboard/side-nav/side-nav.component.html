@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4" style="padding-left: 0 !important;">
+        <div class="side-nav">
+        <div class="row">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Clientes</mat-label>
+            <input
+              matInput
+              (keyup.enter)="validateClient()"
+              type="text"
+              placeholder="Ingrese número de telefono..."
+              [formControl]="clientControl"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <h2 class="title">Seleccione sus productos</h2>
+          <app-item-selector></app-item-selector>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <app-dashboard [client]="selectedClient"></app-dashboard>
+    </div>
+  </div>
+</div>

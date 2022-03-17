@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.25 37.9">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 21px;
+        font-family: BebasNeue-Regular, Bebas Neue;
+      }
+
+      .cls-2 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 0.94px;
+      }
+    </style>
+  </defs>
+  <g id="OBJECTS">
+    <path d="M608.38,529.57a1.11,1.11,0,0,0-1,1.27l1.94,25.83a3.58,3.58,0,0,0,3.4,3.49h30.61a3.58,3.58,0,0,0,3.4-3.49l1.89-25.43a1.48,1.48,0,0,0-1.35-1.67C640.68,529.56,614.16,529.56,608.38,529.57Zm36.18,26.83a1.36,1.36,0,0,1-1.28,1.31H612.7a1.3,1.3,0,0,1-1.24-1.26l-2-25,0-.05h37l.05.05Z" transform="translate(-607.35 -522.26)"/>
+    <path d="M3.26,0H38a3.26,3.26,0,0,1,3.26,3.26V5.74a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V3.26A3.26,3.26,0,0,1,3.26,0Z"/>
+    <text class="cls-1" transform="translate(5.82 29.2)">1 <tspan class="cls-2" x="11.76" y="0">k</tspan><tspan x="20.12" y="0">g</tspan></text>
+    <rect class="cls-3" x="2.09" y="12.73" width="37.12" height="18.86" rx="5.48"/>
+  </g>
+</svg>

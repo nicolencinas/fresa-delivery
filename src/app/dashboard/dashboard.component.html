@@ -1,0 +1,20 @@
+<ng-container >
+  <div class="container-fluid" style="margin-top: 2em;">
+    <div class="row">
+      <div class="col-12">
+        <h2>Informacion del cliente</h2>
+  <div class="client-info">
+    <span><strong>Numero de telefono:</strong>  {{client ? client.telephone : "---"}}</span>
+    <span><strong>Nombre:</strong>  {{client ? client.name : "---"}}</span>
+    <span><strong>Dirección:</strong>  {{client ? client.adress : "---"}}</span>
+    <span><strong>Entre calles:</strong>  {{client ? client.street1 : "---"}} y {{client ? client.street2 : "---"}}</span>
+
+  </div>
+      </div>
+    </div>
+  </div>
+  
+</ng-container>
+<ng-template #noClients>
+  No se encuentra el cliente
+</ng-template>

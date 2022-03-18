@@ -1,0 +1,135 @@
+.products
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 15px;
+    .product-item{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        height: auto;
+        grid-template-areas
+        : 'icon1 price' 'flavours flavours';
+        align-items: center;
+        padding: 1.5em;
+        background-color: aliceblue;
+        border-radius: 12px;
+        margin: 2em 0;
+        box-shadow: 0px 0px 12px 2px rgb(0 0 0 / 20%);
+
+        .cancel{
+            position: absolute;
+            min-width: 30px !important;
+            right: 1em;
+            top: 1em;
+            cursor: pointer;
+            padding: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: 0.5s ease-in-out;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background-color: rgba(255, 0, 0, 0.226);
+            }
+            img{
+                width: 15px;
+                height: 15px;
+            }
+        }
+        
+          img{
+            width: 60px;
+            height: 60px;
+        }
+        .icon{
+            grid-area: icon1;
+            padding: 1em;
+        }
+        .price{
+            grid-area: price;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            font-size: 25px;
+
+        }
+        .flavours{
+            grid-area: flavours;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1em;
+            flex-direction: column;
+        }
+        
+
+    }
+}
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    
+    .tool-item{
+        cursor: pointer;
+    transition: 0.5s ease-in-out;
+    margin-right: 1em;
+    &:hover{
+        transform: scale(1.05);
+    }
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(100, 148, 237, 0.5);
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.cancel{
+    background-color: rgba(0, 128, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    img{
+        width: 25px;
+    }
+
+}
+.accept{
+    background-color: rgba(128, 4, 0, 0.315);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    img{
+        width: 25px;
+    }
+}
+
+::ng-deep .mat-menu-panel{
+    min-height: unset !important;
+    min-width: unset !important;
+    overflow: hidden !important;
+}

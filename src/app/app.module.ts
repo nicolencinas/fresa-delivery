@@ -1,3 +1,5 @@
+import { ConfirmModule } from './dashboard/shared/confirm/confirm.module';
+import { ProductsComponent } from './dashboard/dashboard-views/products/products.component';
 import { ItemSelectorComponent } from './dashboard/side-nav/item-selector/item-selector.component';
 import { SideNavComponent } from './dashboard/side-nav/side-nav.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,13 +13,17 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [	
     AppComponent,
     SideNavComponent,
     DashboardComponent,
-    ItemSelectorComponent
+    ItemSelectorComponent,
+    ProductsComponent
    ],
   imports: [
     BrowserModule,
@@ -26,7 +32,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     CommonModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDialogModule,
+    ConfirmModule,
+    MatButtonModule,
+    MatMenuModule
     
   ],
   providers: [],

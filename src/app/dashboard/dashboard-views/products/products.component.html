@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="products">
+        <div class="product-item"  *ngFor="let product of showProducts;let index = index">
+          <button mat-button class="cancel" [matMenuTriggerFor]="menu" >
+            <img src="../../../../assets/images/close.svg" alt="">
+          </button >
+          <mat-menu #menu="matMenu" xPosition="after">
+           
+            <button (click)="cancelProduct(index)" class="cancel" mat-menu-item>
+              <img  src="../../../../assets/images/check.svg" alt="">
+            </button>
+           
+          </mat-menu>
+          <span class="icon"> 
+            <img [src]="'../../../../assets/images/' + product.icon +'.svg'" alt="">          
+          </span>
+          <span class="price">{{product.price}}$</span>
+          <span class="flavours" *ngIf="product.flavours">
+            <div class="tools">
+              <div class="tool-item" matTooltip="Agregar gustos" (click)="addFlavour(index,'Vainilla')">
+                <img src="../../../../assets/images/plus.svg" alt="">
+              </div>
+              <div class="tool-item" matTooltip="Editar gustos">
+                <img src="../../../../assets/images/edit.svg" alt="">
+              </div>
+              <div class="tool-item" matTooltip="Eliminar gustos">
+                <img src="../../../../assets/images/reload.svg" alt="">
+              </div>
+            </div>
+            <h3>Sabores</h3>
+            <div class="flavour-item" *ngFor="let flavour of product.flavours">
+              <span>{{flavour}}</span>
+            </div>
+          </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

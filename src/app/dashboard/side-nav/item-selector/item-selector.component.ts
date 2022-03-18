@@ -1,4 +1,6 @@
+import { Product, ProductsService } from './../../dashboard-views/products.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-item-selector',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemSelectorComponent implements OnInit {
 
-  constructor() { }
+  public products$:Observable<Product[]>
 
-  ngOnInit() {
+  constructor(private products:ProductsService) { }
+
+  ngOnInit() 
+  {
+    this.products$ = this.products.getAvailableProducts();
+    this.products$.subscribe(console.log)
   }
+
+  addProduct(product:Product){
+    const prd = Object.assign({},product)
+    if(prd.flavours)
+    prd.flavours = [];
+    console.log(prd) 
+    this.products.addProduct(prd)
+  } 
 
 }

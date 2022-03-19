@@ -25,3 +25,21 @@ button{
         background-color: rgba(0, 128, 0, 0.336);
     }
 }
+
+.col-4,.col-8{
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+.col-8{
+    width: calc(100% - 413px);
+}
+.col-4{
+    max-width: 413px;
+    min-width: 413px;
+}
+
+.col-8::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+    border-radius: 15px;
+}

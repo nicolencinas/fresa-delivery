@@ -6,11 +6,11 @@
     .product-item{
         position: relative;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         width: 100%;
         height: auto;
         grid-template-areas
-        : 'icon1 price' 'flavours flavours';
+        : 'icon1 description price' 'flavours flavours flavours';
         align-items: center;
         padding: 1.5em;
         background-color: aliceblue;
@@ -66,6 +66,13 @@
             padding: 1em;
             flex-direction: column;
         }
+        .description{
+            grid-area: description;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 25px;
+        }
         
 
     }
@@ -97,6 +104,24 @@
         img{
             width: 100%;
         }
+    }
+}
+
+.flavours-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    grid-gap:15px;
+    .flavour-item{
+        height: 35px;
+        width: 100%;
+        padding: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        background-color: rgb(116, 179, 235);
+        color: white;
     }
 }
 

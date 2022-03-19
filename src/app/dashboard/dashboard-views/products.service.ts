@@ -24,9 +24,9 @@ export class ProductsService {
   getAvailableProducts() {
     const products: Product[] = 
     [
-      { description: '1 KG',icon:'kilo', price: 800,flavours:[] },
-      { description:'1/2 KG',icon:'medio',price:450,flavours:[]},
-      { description:'1/4 KG',icon:'cuarto',price:250,flavours:[]},
+      { description: 'Un Kilo',icon:'kilo', price: 800,flavours:[] },
+      { description:'Medio Kilo',icon:'medio',price:450,flavours:[]},
+      { description:'Cuarto Kilo',icon:'cuarto',price:250,flavours:[]},
       { description:"Copa Helada",icon:'copa-helada',price:600},
       { description:"Tacitas por unidad",icon:'tacitas',price:10,grouped:true}
     ];

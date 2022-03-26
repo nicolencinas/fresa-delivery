@@ -1,5 +1,7 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Client } from '../models/client';
 
 
 @Injectable({
@@ -9,10 +11,13 @@ export class ClientService {
 
 constructor(private http:HttpClient) { }
 
-getClients(){
-
-  return this.http.get('http://localhost:3001/clients')
+getClients():Observable<Client[]>{
+  return this.http.get<Client[]>('http://localhost:3001/clients')
 }
 
+getClientByID(clientID:string):Observable<Client>{
+  return this.http.get<Client>(`http://localhost:3001/clients/${clientID}`)
+}
+  
 }
 

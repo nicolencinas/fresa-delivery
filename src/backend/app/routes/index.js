@@ -9,6 +9,9 @@ const routes = [
         path:'clients'
     },
     {
+        path:'products'
+    },
+    {
         path: 'items'
     },
     {

@@ -1,8 +1,9 @@
 import { ConfirmComponent } from './../../shared/confirm/confirm.component';
 import { Observable } from 'rxjs';
-import { Product, ProductsService } from './../products.service';
+import { ProductsService } from './../products.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Product } from '../../shared/models/product';
 
 @Component({
   selector: 'app-products',

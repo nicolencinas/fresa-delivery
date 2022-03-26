@@ -1,6 +1,7 @@
-import { Product, ProductsService } from './../../dashboard-views/products.service';
+import { ProductsService } from './../../dashboard-views/products.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from '../../shared/models/product';
 
 @Component({
   selector: 'app-item-selector',
@@ -21,7 +22,6 @@ export class ItemSelectorComponent implements OnInit {
 
   addProduct(product:Product){
     const prd = Object.assign({},product) 
-    if(prd.flavours)
     prd.flavours = [];
     console.log(prd) 
     this.products.addProduct(prd)

@@ -1,4 +1,4 @@
-const model = require('../models/clients')
+const model = require('../models/products')
 
 
 /**
@@ -10,7 +10,7 @@ exports.getData = (req, res) => {
         res.send(
             docs
          )
-    })
+    }).sort({"order":"asc"})
 }
 
 /**

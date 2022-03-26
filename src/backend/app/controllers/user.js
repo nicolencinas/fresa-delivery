@@ -1,3 +1,4 @@
+const mongoose = require('mongoose')
 const model = require('../models/user')
 
 const options = {

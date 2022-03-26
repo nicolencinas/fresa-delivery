@@ -21,25 +21,28 @@ export class SideNavComponent implements OnInit {
   constructor(private dialog:MatDialog,private clientService:ClientService) { }
 
   ngOnInit() {
-    this.getClients()
+    //this.getClients()
   }
   getClients() {
-    this.clientService.getClients().subscribe((res:any)=>{this.clients = res.items.docs;console.log(res.items.docs)})
+    this.clientService.getClients().subscribe((res:any)=>{this.clients = res})
+    console.log(this.clients)
       
   }
 
   validateClient(){
-    console.log(this.clients)
-    const client = this.clients.filter(client => client
-       === this.clientControl.value )[0]
-    if (client){
-     this.selectedClient = client
-    }
-    else{
-      this.selectedClient = undefined
-      this.openConfirmAbmClient();
-    }
-    //this.selectedClient.next()
+
+    this.clientService.getClientByID(this.clientControl.value).subscribe(
+      client =>{
+        console.log(client)
+        if (client){
+          this.selectedClient = client
+         }
+         else{
+           this.selectedClient = undefined
+           this.openConfirmAbmClient();
+         }
+      }
+    )
   }
 
   openConfirmAbmClient(){

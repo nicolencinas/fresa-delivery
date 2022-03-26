@@ -2,9 +2,9 @@
   <div class="items-container">
     <ng-container *ngIf="(products$ | async) as products">
       <div class="item" *ngFor="let product of products" (click)="addProduct(product)"
-      [matTooltip]="product.description">
+      [matTooltip]="product.detail">
       
-        <img [src]="'../../../../assets/images/'+product.icon+'.svg'" alt="">
+        <img [src]="'../../../../assets/images/'+product.cod+'.svg'" alt="">
       </div>
     </ng-container>
     

@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import { of, Observable } from 'rxjs';
+import { Product } from '../shared/models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +9,7 @@ import { of } from 'rxjs';
 export class ProductsService {
   products: Product[];
 
-  constructor() {
+  constructor(private http:HttpClient) {
     this.products = []
   }
 
@@ -19,18 +21,10 @@ export class ProductsService {
     this.products[index].flavours.push(flavour)
   }
 
-  getAvailableProducts() {
-    const products: Product[] = 
-    [
-      { description: 'Un Kilo',icon:'kilo', price: 800,flavours:[] },
-      { description:'Medio Kilo',icon:'medio',price:450,flavours:[]},
-      { description:'Cuarto Kilo',icon:'cuarto',price:250,flavours:[]},
-      { description:"Copa Helada",icon:'copa-helada',price:600},
-      { description:"Tacitas por unidad",icon:'tacitas',price:10,grouped:true}
-    ];
+  getAvailableProducts():Observable<Product[]> {
 
-    return of(products)
-  }
+    return this.http.get<Product[]>('http://localhost:3001/products');
+    }
 
   getDeliveryProducts(){
     return of(this.products)
@@ -40,10 +34,3 @@ export class ProductsService {
   }
 }
 
-export class Product {
-  description: string;
-  price: number;
-  icon?:string;
-  flavours?: string[];
-  grouped?:boolean;
-}

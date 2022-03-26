@@ -4,7 +4,7 @@ const passport = require('passport')
 const requireAuth = passport.authenticate('jwt', {
     session: false
 })
-const controller = require('../controllers/clients')
+const controller = require('../controllers/products')
 
 const router = express.Router()
 

@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    <h2>Alta de clientes</h2>
+  </div>
+  <div class="row">
+    <form [formGroup]="clientControl">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Telefono</mat-label>
+            <input matInput type="text" formControlName="telephone" placeholder="Telefono">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Nombre">
+          </mat-form-field>        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Dirección</mat-label>
+            <input matInput type="text" formControlName="adress" placeholder="Dirección">
+          </mat-form-field>
+        </div>
+     
+      </div>
+     <div class="row">
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Entre Calle 1</mat-label>
+            <input matInput type="text" formControlName="street1" placeholder="Entre calle 1">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-6">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Entre Calle 2</mat-label>
+            <input matInput type="text" formControlName="street2" placeholder="Entre calle 2">
+          </mat-form-field>
+               </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Observaciones</mat-label>
+            <textarea matInput type="text" formControlName="observation" placeholder="Observaciones"></textarea>
+          </mat-form-field>
+        </div>
+     
+      </div>
+    </form>
+  </div>
+   
+</div>

@@ -43,3 +43,7 @@ button{
     background-color: blueviolet;
     border-radius: 15px;
 }
+
+::ng-deep .mat-form-field{
+    width: 100% !important;
+}

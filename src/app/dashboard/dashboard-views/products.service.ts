@@ -13,12 +13,10 @@ export class ProductsService {
 
   addProduct(product: Product) {
     this.products.push(product);
-    console.log(this.products)
   }
 
   addFlavour(index:number,flavour:string){
     this.products[index].flavours.push(flavour)
-    console.log(index,flavour,this.products[index])
   }
 
   getAvailableProducts() {
@@ -38,7 +36,6 @@ export class ProductsService {
     return of(this.products)
   }
   removeProduct(index:number){
-    console.log(index)
     this.products.splice(index,1)
   }
 }

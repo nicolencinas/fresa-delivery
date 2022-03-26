@@ -1,24 +1,6 @@
 [
  {
-   "telephone": "4748-8550",
-   "name": "Acosta Juan (buen cliente)",
-   "adress": "Posadas 1761",
-   "street1": "Melendez",
-   "street2": "Corrientes",
-   "backStreet": "",
-   "cp": "1611",
-   "locality": "DT",
-   "delivery": "False",
-   "buyCant": "59",
-   "buyimport": "628",
-   "observation": "5",
-   "fault": "",
-   "modifyDate": "",
-   "expirationDate": "",
-   "user": "",
-   "FIELD17": "",
-   "FIELD18": "",
-   "FIELD19": ""
+   "telephone": "4748-8550","name": "Acosta Juan (buen cliente)","adress": "Posadas 1761","street1": "Melendez","street2": "Corrientes","backStreet": "","cp": "1611","locality": "DT","delivery": "False","buyCant": "59","buyimport": "628","observation": "5","fault": "","modifyDate": "","expirationDate": "","user": "","FIELD17": "", "FIELD18": "", "FIELD19": ""
  },
  {
    "telephone": "4463-7572",

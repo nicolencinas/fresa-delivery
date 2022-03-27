@@ -12,6 +12,9 @@ const routes = [
         path:'products'
     },
     {
+        path:'history'
+    },
+    {
         path: 'items'
     },
     {

@@ -8,6 +8,7 @@ const controller = require('../controllers/history')
 
 const router = express.Router()
 
+
 /**
  * Ruta: /user GET
  */

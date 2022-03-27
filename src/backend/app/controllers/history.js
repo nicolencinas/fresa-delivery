@@ -1,10 +1,8 @@
 const model = require('../models/history')
-const mongoose = require('mongoose')
-
 
 const options = {
     page: 1,
-    limit: 10
+    limit: 1000000
 };
 
 const parseId = (id) => {
@@ -15,10 +13,10 @@ const parseId = (id) => {
  */
 
 exports.getData = (req, res) => {
-    model.find({}, (err, docs) => {
-        res.send(
-            docs
-        )
+    model.find({},(err, docs) => {
+        res.send({
+            items: docs
+        })
     })
 }
 
@@ -27,11 +25,11 @@ exports.getData = (req, res) => {
  */
 
 exports.getSingle = (req, res) => {
-    model.find({ telephone:req.params.telephone},
+    model.findOne({ _id: parseId(req.params.id) },
         (err, docs) => {
-            res.send(
-               docs
-            )
+            res.send({
+                items: docs
+            })
         })
 }
 
@@ -47,7 +45,7 @@ exports.updateSingle = (req, res) => {
         body,
         (err, docs) => {
             res.send({
-                docs
+                items: docs
             })
         })
 }

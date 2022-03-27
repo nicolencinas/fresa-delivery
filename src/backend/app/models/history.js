@@ -3,25 +3,24 @@ const mongoosePaginate = require("mongoose-paginate-v2");
 
 const UserScheme = new mongoose.Schema(
   {
-    num_cant:{
-        type:Number
+    num_cant: {
+      type: Number
     },
-    date:{
-        type:Date
+    date: {
+      type: Date
     },
-    total:{
-        type:Number
+    total: {
+      type: Number
     },
-    pay:{
-        type:Number
+    pay: {
+      type: Number
     },
-    turned:{
-        type:Number
+    turned: {
+      type: Number
     },
     telephone: {
       type: String,
     },
-   
   },
   {
     versionKey: false,

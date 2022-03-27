@@ -9,10 +9,10 @@ const routes = [
         path:'clients'
     },
     {
-        path:'products'
+        path:'history'
     },
     {
-        path:'history'
+        path:'products'
     },
     {
         path: 'items'

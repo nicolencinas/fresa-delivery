@@ -1,6 +1,15 @@
 const model = require('../models/history')
+const mongoose = require('mongoose')
 
 
+const options = {
+    page: 1,
+    limit: 10
+};
+
+const parseId = (id) => {
+    return mongoose.Types.ObjectId(id)
+}
 /**
  * Obtener DATA de USUARIOS
  */
@@ -9,7 +18,7 @@ exports.getData = (req, res) => {
     model.find({}, (err, docs) => {
         res.send(
             docs
-         )
+        )
     })
 }
 
@@ -18,7 +27,7 @@ exports.getData = (req, res) => {
  */
 
 exports.getSingle = (req, res) => {
-    model.findOne({ telephone:req.params.telephone},
+    model.find({ telephone:req.params.telephone},
         (err, docs) => {
             res.send(
                docs

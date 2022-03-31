@@ -1,0 +1,30 @@
+<ng-container *ngIf="(flavours$| async) as flavours">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8" style="height: unset !important;">
+        <div class="flavours-container">
+          <div class="flavour" *ngFor="let flavour of flavours" [matTooltip]="flavour.description" (click)="addFlavour(flavour)">
+            {{flavour.cod}}
+          </div>
+
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="selected-flavours">
+          <h3>Gustos Seleccionados</h3>
+          <span *ngFor="let flavour of selectedFlavours;let index = index">{{flavour.description}} <button class="cancel" (click)="deleteFlavour(index)"> <img src="../../../../../assets/images/close.svg" alt=""></button></span>
+<div class="actions">
+        <button class="aceptar" [disabled]="selectedFlavours.length<=0" (click)="acceptFlavours()"> <img src="../../../../../assets/images/check.svg" alt="">Agregar Gustos</button>
+        <button class="cancelar" (click)="cancelFlavours()">
+          <img src="../../../../../assets/images/close.svg" alt=""> Cancelar
+        </button>
+      </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+
+
+</ng-container>

@@ -1,0 +1,289 @@
+[{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c84"
+  },
+  "cod": "A",
+  "description": "ANANA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c85"
+  },
+  "cod": "AL",
+  "description": "ALMENDRADO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c86"
+  },
+  "cod": "ALF",
+  "description": "ALFAJOR"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c87"
+  },
+  "cod": "B",
+  "description": "BANANA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c88"
+  },
+  "cod": "BS",
+  "description": "BANANA SPLIT"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c89"
+  },
+  "cod": "BC",
+  "description": "BOM CAKE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8a"
+  },
+  "cod": "CA",
+  "description": "CREMA CAFE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8b"
+  },
+  "cod": "CI",
+  "description": "CREMA CIELO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8c"
+  },
+  "cod": "C",
+  "description": "CHOCOLATE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8d"
+  },
+  "cod": "CAL",
+  "description": "CHOCOLATE CON ALMENDRAS"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8e"
+  },
+  "cod": "CP",
+  "description": "CHOCOLATE CON PASAS AL RHUM"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c8f"
+  },
+  "cod": "SC",
+  "description": "SUPER CHOCOLATE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c90"
+  },
+  "cod": "BCO",
+  "description": "CHOCOLATE BLANCO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c91"
+  },
+  "cod": "BAL",
+  "description": "BLANCO CON ALMENDRAS"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c92"
+  },
+  "cod": "MC",
+  "description": "MOUSSE DE CHOCOLATE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c93"
+  },
+  "cod": "CE",
+  "description": "CEREZA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c94"
+  },
+  "cod": "CC",
+  "description": "CHEESE CAKE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c95"
+  },
+  "cod": "D",
+  "description": "DULCE DE LECHE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c96"
+  },
+  "cod": "DG",
+  "description": "DULCE DE LECHE GRANIZADO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c97"
+  },
+  "cod": "DN",
+  "description": "DULCE DE LECHE CON NUECES"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c98"
+  },
+  "cod": "DUR",
+  "description": "DURAZNO AL OPORTO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c99"
+  },
+  "cod": "F",
+  "description": "FRUTILLA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9a"
+  },
+  "cod": "FC",
+  "description": "FRUTILLA A LA CREMA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9b"
+  },
+  "cod": "FRA",
+  "description": "FRAMBUESA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9c"
+  },
+  "cod": "FR",
+  "description": "FRUTILLA A LA REINA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9d"
+  },
+  "cod": "MAY",
+  "description": "MARACUYA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9e"
+  },
+  "cod": "FL",
+  "description": "FLAN"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7c9f"
+  },
+  "cod": "G",
+  "description": "GRANIZADO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca0"
+  },
+  "cod": "KW",
+  "description": "KINOTOS AL WHISKY"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca1"
+  },
+  "cod": "L",
+  "description": "LIMON"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca2"
+  },
+  "cod": "ML",
+  "description": "MOUSSE DE LIMON"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca3"
+  },
+  "cod": "MG",
+  "description": "MENTA GRANIZADA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca4"
+  },
+  "cod": "MA",
+  "description": "MANTECOL"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca5"
+  },
+  "cod": "N",
+  "description": "NARANJA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca6"
+  },
+  "cod": "O",
+  "description": "CREMA OREO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca7"
+  },
+  "cod": "B0N",
+  "description": "BON O BON"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca8"
+  },
+  "cod": "R",
+  "description": "CREMA RUSA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7ca9"
+  },
+  "cod": "SN",
+  "description": "SELVA NEGRA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7caa"
+  },
+  "cod": "S",
+  "description": "SAMBAYON"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cab"
+  },
+  "cod": "TR",
+  "description": "CREMA TRAMONTANA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cac"
+  },
+  "cod": "TI",
+  "description": "TIRAMISU"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cad"
+  },
+  "cod": "V",
+  "description": "VAINILLA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cae"
+  },
+  "cod": "AM",
+  "description": "CREMA AMERICANA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7caf"
+  },
+  "cod": "FBC",
+  "description": "FRUTAS DEL BOSQUE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cb0"
+  },
+  "cod": "SD",
+  "description": "SUPER DULCE"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cb1"
+  },
+  "cod": "SH",
+  "description": "CREMA CABSHA"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cb2"
+  },
+  "cod": "CO",
+  "description": "COCO"
+},{
+  "_id": {
+    "$oid": "623f7cbfce35608ca40b7cb3"
+  },
+  "cod": "FER",
+  "description": "FERRERO"
+}]

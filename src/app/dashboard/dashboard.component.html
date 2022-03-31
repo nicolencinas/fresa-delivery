@@ -4,10 +4,25 @@
       <div class="col-12">
         <h2>Informacion del cliente</h2>
   <div class="client-info">
-    <span><strong>Numero de telefono:</strong>  {{client ? client.telephone : "---"}}</span>
-    <span><strong>Nombre:</strong>  {{client ? client.name : "---"}}</span>
-    <span><strong>Dirección:</strong>  {{client ? client.adress : "---"}}</span>
-    <span><strong>Entre calles:</strong>  {{client ? client.street1 : "---"}} y {{client ? client.street2 : "---"}}</span>
+    <div class="contact-info">
+      <span><strong>Numero de telefono:</strong> <small>{{client ? client.telephone : "---"}}</small></span>
+    <span><strong>Nombre:</strong>  <small>{{client ? client.name : "---"}}</small></span>
+    </div>
+    <div class="adress-info">
+      <span><strong>Dirección:</strong>  <small>{{client ? client.adress : "---"}}</small></span>
+    <span><strong>Entre calles:</strong> <small> {{client ? client.street1 : "---"}} y {{client ? client.street2 : "---"}}</small></span>
+    </div>
+
+    <div class="actions">
+      <div matTooltip="Ver historial" (click)="openClientHistorial()" class="action">
+
+      </div>
+      <div class="action">
+
+      </div>
+    </div>
+    
+    
 
   </div>
  

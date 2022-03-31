@@ -2,25 +2,34 @@
   <div class="row">
     <div class="col-12">
       <div class="products">
-        <div class="product-item"  *ngFor="let product of showProducts;let index = index">
+        <div class="additionals">
+          <ng-container *ngFor="let additional of additionals">
+            <div class="additional-item" *ngIf="showProducts.additionals[additional] > 0">
+             <div class="index">{{showProducts.additionals[additional]}}</div>
+             <img [src]="'../../../../assets/images/' + additional +'.svg'" alt="">          
+            </div>
+          </ng-container>
+      </div>
+        <div class="product-item"  *ngFor="let product of showProducts.products;let index = index">
           <button mat-button class="cancel" [matMenuTriggerFor]="menu" >
             <img src="../../../../assets/images/close.svg" alt="">
           </button >
           <mat-menu #menu="matMenu" xPosition="after">
            
-            <button (click)="cancelProduct(index)" class="cancel" mat-menu-item>
+            <button (click)="cancelProduct(product.type,index)" class="cancel" mat-menu-item>
               <img  src="../../../../assets/images/check.svg" alt="">
             </button>
            
           </mat-menu>
           <span class="icon"> 
-            <img [src]="'../../../../assets/images/' + product.icon +'.svg'" alt="">          
+            <img [src]="'../../../../assets/images/' + product.cod +'.svg'" alt="">          
           </span>
           <span class="price">{{product.price}}$</span>
-          <span class="description">{{product.description}}</span>
-          <span class="flavours" *ngIf="product.flavours">
+          <span class="description">{{product.detail}}</span>
+          <span class="flavours" >
+            <h3>Sabores</h3>
             <div class="tools">
-              <div class="tool-item" matTooltip="Agregar gustos" (click)="addFlavour(index,'Dulce de leche granizado')">
+              <div class="tool-item" matTooltip="Agregar gustos" (click)="openFlavourSelector(index)">
                 <img src="../../../../assets/images/plus.svg" alt="">
               </div>
               <div class="tool-item" matTooltip="Editar gustos">
@@ -30,16 +39,57 @@
                 <img src="../../../../assets/images/reload.svg" alt="">
               </div>
             </div>
-            <h3>Sabores</h3>
+            
             <div class="flavours-container">
               <div class="flavour-item" *ngFor="let flavour of product.flavours">
-              <span>{{flavour}}</span>
+              <span>{{flavour.description}}</span>
             </div>
             </div>
             
           </span>
 
         </div>
+
+        <div class="product-item minimized"  *ngFor="let product of showProducts.cakes;let index = index">
+          <button mat-button class="cancel" [matMenuTriggerFor]="menu" >
+            <img src="../../../../assets/images/close.svg" alt="">
+          </button >
+          <mat-menu #menu="matMenu" xPosition="after">
+           
+            <button (click)="cancelProduct(product.type,index)" class="cancel" mat-menu-item>
+              <img  src="../../../../assets/images/check.svg" alt="">
+            </button>
+           
+          </mat-menu>
+          <span class="icon"> 
+            <img [src]="'../../../../assets/images/' + product.cod +'.svg'" alt="">          
+          </span>
+          <span class="price">{{product.price}}$</span>
+          <span class="description">{{product.detail}}</span>
+          
+
+        </div>
+        <div class="product-item minimized"  *ngFor="let product of showProducts.goblets;let index = index">
+          <button mat-button class="cancel" [matMenuTriggerFor]="menu" >
+            <img src="../../../../assets/images/close.svg" alt="">
+          </button >
+          <mat-menu #menu="matMenu" xPosition="after">
+           
+            <button (click)="cancelProduct(product.type,index)" class="cancel" mat-menu-item>
+              <img  src="../../../../assets/images/check.svg" alt="">
+            </button>
+           
+          </mat-menu>
+          <span class="icon"> 
+            <img [src]="'../../../../assets/images/' + product.cod +'.svg'" alt="">          
+          </span>
+          <span class="price">{{product.price}}$</span>
+          <span class="description">{{product.detail}}</span>
+
+        </div>
+
+        
+        
       </div>
     </div>
   </div>

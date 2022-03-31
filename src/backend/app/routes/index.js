@@ -9,7 +9,13 @@ const routes = [
         path:'clients'
     },
     {
-        path:'history'
+        path:'historial'
+    },
+    {
+        path:'history-detail'
+    },
+    {
+        path:'flavours'
     },
     {
         path:'products'

@@ -1,6 +1,6 @@
-import { ClientService } from './../shared/clients-abm/client.service';
-import { ConfirmComponent } from './../shared/confirm/confirm.component';
-import { ClientsAbmComponent } from './../shared/clients-abm/clients-abm.component';
+import { ClientService } from '../shared/components/clients-abm/client.service';
+import { ConfirmComponent } from '../shared/components/confirm/confirm.component';
+import { ClientsAbmComponent } from '../shared/components/clients-abm/clients-abm.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';

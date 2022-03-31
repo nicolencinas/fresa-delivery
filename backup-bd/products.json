@@ -1,0 +1,211 @@
+[{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d54"
+  },
+  "cod": "kilo",
+  "detail": "1 Kilo",
+  "price": 980,
+  "status": true,
+  "order": 0,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d55"
+  },
+  "cod": "cuarto",
+  "detail": "1/4 Kilo",
+  "price": 320,
+  "status": true,
+  "order": 2,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d57"
+  },
+  "cod": "medio",
+  "detail": "1/2 Kilo",
+  "price": 580,
+  "status": true,
+  "order": 1,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5a"
+  },
+  "cod": "granita-cuarto",
+  "detail": "1/4 Granita",
+  "price": 200,
+  "status": true,
+  "order": 5,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5b"
+  },
+  "cod": "granita-medio",
+  "detail": "1/2 Granita",
+  "price": 450,
+  "status": true,
+  "order": 4,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5c"
+  },
+  "cod": "alm-chico",
+  "detail": "P. Almendrado Chico",
+  "price": 0,
+  "status": true,
+  "order": 15,
+  "type": "CAKE"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5d"
+  },
+  "cod": "alm-gde",
+  "detail": "P. Almendrado Grande",
+  "price": 1300,
+  "status": true,
+  "order": 16,
+  "type": "CAKE"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5e"
+  },
+  "cod": "cucu-1",
+  "detail": "Cucuruchos",
+  "price": 15,
+  "status": true,
+  "order": 9,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d5f"
+  },
+  "cod": "tacitas",
+  "detail": "Vasitos",
+  "price": 40,
+  "status": true,
+  "order": 6,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d60"
+  },
+  "cod": "tacitas-2",
+  "detail": "Vasitos",
+  "price": 100,
+  "status": true,
+  "order": 7,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d62"
+  },
+  "cod": "tacitas-reg",
+  "detail": "Vasitos Regalo",
+  "price": 0,
+  "status": true,
+  "order": 8,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d64"
+  },
+  "cod": "cheese-cake",
+  "detail": "Torta Cheese Cake",
+  "price": 1900,
+  "status": true,
+  "order": 14,
+  "type": "CAKE"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d65"
+  },
+  "cod": "lista",
+  "detail": "Lista",
+  "price": 0,
+  "status": true,
+  "order": 17,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d66"
+  },
+  "cod": "iman",
+  "detail": "Iman",
+  "price": 0,
+  "status": true,
+  "order": 18,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d67"
+  },
+  "cod": "copa-helada",
+  "detail": "Copa Sundae",
+  "price": 400,
+  "status": true,
+  "order": 11,
+  "type": "GOBLET"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d6a"
+  },
+  "cod": "cucharitas",
+  "detail": "Cucharitas",
+  "price": 0,
+  "status": true,
+  "order": 19,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d6d"
+  },
+  "cod": "copa-split",
+  "detail": "Copa Split",
+  "price": 400,
+  "status": true,
+  "order": 13,
+  "type": "GOBLET"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d6e"
+  },
+  "cod": "copa-fresa",
+  "detail": "Copa Fresa",
+  "price": 400,
+  "status": true,
+  "order": 12,
+  "type": "GOBLET"
+},{
+  "_id": {
+    "$oid": "623f8315ce35608ca40b7d6f"
+  },
+  "cod": "granita-kilo",
+  "detail": "1 Kilo Granita",
+  "price": 600,
+  "status": true,
+  "order": 3,
+  "type": "PRODUCT"
+},{
+  "_id": {
+    "$oid": "623f860bce35608ca40b7d71"
+  },
+  "cod": "cucu-reg",
+  "detail": "Cucurucho Regalo",
+  "price": 0,
+  "status": true,
+  "order": 10,
+  "type": "ADDITIONAL"
+},{
+  "_id": {
+    "$oid": "62411a8d1ec7b5ca424fac16"
+  },
+  "cod": "kilo-promo",
+  "detail": "1 Kilo (Promo)",
+  "price": 980,
+  "status": true,
+  "order": 0,
+  "type": "PRODUCT"
+}]

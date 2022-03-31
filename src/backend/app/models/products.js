@@ -14,6 +14,9 @@ const UserScheme = new mongoose.Schema(
       },
     status:{
         type: Boolean,
+      },
+      customizable:{
+        type:Boolean
       }
     
   },

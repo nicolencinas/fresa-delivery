@@ -5,4 +5,5 @@ export class Product {
     status:boolean;
     flavours?:any[]
   order: number;
+  type:"PRODUCT" | "ADDITIONAL" | "CAKE" | "GOBLET"
 }

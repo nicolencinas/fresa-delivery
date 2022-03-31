@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/css/color-pallete.scss";
 *{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
@@ -27,9 +28,12 @@ button{
 }
 
 .col-4,.col-8{
+    &.db{
     height: 100vh;
     max-height: 100vh;
     overflow-y: auto;
+    }
+    
 }
 .col-8{
     width: calc(100% - 413px);
@@ -46,4 +50,24 @@ button{
 
 ::ng-deep .mat-form-field{
     width: 100% !important;
+}
+
+.bread-crumb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    margin-left: -3em;
+    padding-left: 3em;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    transform: skew(-20deg);
+    background-color: $kiwi;
+    h2,h3{
+        margin: 0 !important;
+    }
 }

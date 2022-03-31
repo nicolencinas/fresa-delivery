@@ -1,7 +1,113 @@
-::ng-deep .mat-table{
-    width: 100%;
-}
+// ::ng-deep .mat-table{
+//     width: 100%;
+// }
 
-.compras{
-    padding:2em 0;
-} 
+// .compras{
+//     padding:2em 0;
+// } 
+
+// tr {
+//     display: grid;
+//     grid-template-columns: 34% repeat(4, 16.5%);
+//     grid-template-rows: 0.5fr 1fr;
+//     row-gap: 10px;
+//     column-gap: 10px;
+//     overflow: hidden;
+//     max-height: 56px;
+//     height: 56px;
+//     border-bottom-width: 1px ;
+//     transition: 0.5s ease-in-out;  
+
+//     grid-template-areas:
+//       "tdspan tdspan tdspan tdspan tdspan"
+//       "info info info info info"
+//       ;
+
+//     .info{
+//         grid-area: info;
+//         width: 100%;
+//         background-color: aqua;
+//         height: 150px;
+//         border-radius: 15px;
+//     }
+//     &.extended {
+//       max-height: 400px !important;
+//       height: auto;
+//     }
+//     td {
+//       display: flex;
+//       margin: 0;
+//       &.center{
+//           justify-content: center;
+//       }
+      
+//       span {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         grid-area: tdspan;
+//       }
+//       margin-top: 0.5em;
+//     }
+
+//     th{
+//         &.center{
+//             text-align: center !important;
+//         }
+//     }
+//   }
+
+//   ::ng-deep td.mat-cell{
+//     padding: 0;
+//     border-bottom-width: 0px !important;  
+    
+//   }
+
+table {
+    width: 100%;
+  }
+  
+  tr.example-detail-row {
+    height: 0;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .example-element-row td {
+    border-bottom-width: 0;
+  }
+  
+  .example-element-detail {
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .example-element-diagram {
+    min-width: 80px;
+    border: 2px solid black;
+    padding: 8px;
+    font-weight: lighter;
+    margin: 8px 0;
+    height: 104px;
+  }
+  
+  .example-element-symbol {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: normal;
+  }
+  
+  .example-element-description {
+    padding: 16px;
+  }
+  
+  .example-element-description-attribution {
+    opacity: 0.5;
+  }
+  

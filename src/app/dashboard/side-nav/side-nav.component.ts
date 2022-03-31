@@ -15,7 +15,7 @@ import clientes from '../../../assets/json/clientes.json'
 export class SideNavComponent implements OnInit {
 
   clients:any[] = []
-  clientControl= new FormControl('',[Validators.required])
+  clientControl= new FormControl('4741-6096',[Validators.required])
   selectedClient: any;
 
   constructor(private dialog:MatDialog,private clientService:ClientService) { }

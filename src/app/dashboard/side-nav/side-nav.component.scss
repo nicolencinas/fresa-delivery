@@ -29,3 +29,31 @@
     margin-top: 3em;
 }
 }
+
+::ng-deep .mat-snack-bar-container{
+    margin: 31px !important;
+    &.error{
+        background: $grape;
+        color: black;
+        .mat-button{
+            background-color:black;
+            color: aliceblue;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &.success{
+        background: $kiwi;
+        color: black;
+        .mat-button{
+            background-color:black;
+            color: aliceblue;
+            padding: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

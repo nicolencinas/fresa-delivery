@@ -33,6 +33,9 @@ export class ProductsComponent implements OnInit {
     this.products$.subscribe(products =>{this.showProducts=products,console.log(products)})
   }
 
+  addUnit(unit:any){console.log(unit)}
+  sustractUnit(unit:any){console.log(unit)}
+
   cancelProduct(type:string,index:number){
     this.productsService.removeProduct(type,index)
   }

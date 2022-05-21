@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.clientStatus = this.client !== undefined
   }
-
+  
   openClientHistorial(){
     const dialogRef = this.dialog.open(ClientHistorialComponent, {
       width: '90vw',

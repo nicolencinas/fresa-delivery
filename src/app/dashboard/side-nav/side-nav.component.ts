@@ -4,8 +4,7 @@ import { ClientsAbmComponent } from '../shared/components/clients-abm/clients-ab
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
-import clientes from '../../../assets/json/clientes.json'
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-side-nav',
@@ -17,8 +16,9 @@ export class SideNavComponent implements OnInit {
   clients:any[] = []
   clientControl= new FormControl('4741-6096',[Validators.required])
   selectedClient: any;
+  
 
-  constructor(private dialog:MatDialog,private clientService:ClientService) { }
+  constructor(private dialog:MatDialog,private clientService:ClientService,private _snackBar: MatSnackBar) { }
 
   ngOnInit() {
     //this.getClients()
@@ -36,13 +36,20 @@ export class SideNavComponent implements OnInit {
         console.log(client)
         if (client){
           this.selectedClient = client
+          this.openSnackBar('Se obtuvo el cliente con el numero '+client.telephone,"Aceptar",['success'])
          }
          else{
            this.selectedClient = undefined
            this.openConfirmAbmClient();
+           this.openSnackBar("No se pudo obtener el cliente solicitado","Aceptar",['error']);
+
          }
       }
     )
+  }
+
+  openSnackBar(message:string,action:string,panelClass?:any) {
+    this._snackBar.open(message,action,{duration:30000,horizontalPosition:"end",verticalPosition:"top",panelClass})
   }
 
   openConfirmAbmClient(){

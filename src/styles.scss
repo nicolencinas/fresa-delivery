@@ -48,8 +48,30 @@ button{
     border-radius: 15px;
 }
 
-::ng-deep .mat-form-field{
+::ng-deep{
+    &.mat-snack-bar-container{
+        &.error{
+            background-color: $grape;
+        }
+        &.success{
+            background-color: $kiwi;
+        }
+    }
+   .mat-form-field{
     width: 100% !important;
+} 
+.mat-dialog-container{
+    text-align: center;
+}
+} 
+
+::ng-deep .mat-snack-bar-container{
+    .error{
+        background: $grape;
+    }
+    .success{
+        background: $kiwi;
+    }
 }
 
 .bread-crumb{

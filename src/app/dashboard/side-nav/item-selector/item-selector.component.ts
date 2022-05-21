@@ -21,9 +21,9 @@ export class ItemSelectorComponent implements OnInit {
   }
 
   addProduct(product:Product){
-    const prd = Object.assign({},product) 
-    prd.flavours = [];
-    this.products.addProduct(prd)
+    // const prd = Object.assign({},product) 
+    // prd.flavours = [];
+    // this.products.addProduct(prd)
   } 
 
 }

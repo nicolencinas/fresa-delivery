@@ -25,6 +25,24 @@ exports.getData = (req, res) => {
  */
 
  exports.getSingle = (req, res) => {
+    model.aggregate([
+        {
+            $group: {
+                order: "$order",
+                obj: { $push: { cod: "$cod", item: "$item" } }
+            }
+        },
+        {
+            $replaceRoot: {
+                newRoot: {
+                    $let: {
+                        vars: { obj: [ { k: {$substr:["$order", 0, -1 ]}, v: "$obj" } ] },
+                        in: { $arrayToObject: "$$obj" }
+                    }
+                }
+            }
+        }
+    ])
     model.find({ id: req.params.id},
         (err, docs) => {
             if (err){

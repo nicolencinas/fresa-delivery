@@ -5,7 +5,13 @@
         <div class="additionals">
           <ng-container *ngFor="let additional of additionals">
             <div class="additional-item" *ngIf="showProducts.additionals[additional] > 0">
-             <div class="index">{{showProducts.additionals[additional]}}</div>
+             <div class="index">
+
+              <span class="after" (click)="addUnit(showProducts.additionals[additional])"> <img style="transform: rotate(90deg);" src="../../../../assets/images/chevron.svg" alt=""> </span>
+              <span class="index-id">{{showProducts.additionals[additional]}}</span>
+              <span class="before" (click)="sustractUnit(showProducts.additionals[additional])"> <img style="transform: rotate(-90deg);" src="../../../../assets/images/chevron.svg" alt=""> </span>
+
+              </div>
              <img [src]="'../../../../assets/images/' + additional +'.svg'" alt="">          
             </div>
           </ng-container>

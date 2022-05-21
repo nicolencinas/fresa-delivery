@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { FlavoursSelectorComponent } from './dashboard/shared/components/flavours-selector/flavours-selector.component';
 import { ClientHistorialComponent } from './dashboard/shared/components/client-historial/client-historial.component';
 import { ClientsAbmComponent } from './dashboard/shared/components/clients-abm/clients-abm.component';
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import localeEsAr from '@angular/common/locales/es-AR';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 registerLocaleData(localeEsAr, 'es-AR');
@@ -54,7 +56,9 @@ registerLocaleData(localeEsAr, 'es-AR');
     FormsModule,
     HttpClientModule,
     MatTableModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule, 
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "es-AR" }, //replace "en-US" with your locale

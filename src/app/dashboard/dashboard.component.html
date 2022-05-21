@@ -1,42 +1,71 @@
-<ng-container >
-  <div class="container-fluid" style="margin-top: 2em;">
+<ng-container>
+  <div class="container-fluid" style="margin-top: 2em">
     <div class="row">
       <div class="col-12">
         <h2>Informacion del cliente</h2>
-  <div class="client-info">
-    <div class="contact-info">
-      <span><strong>Numero de telefono:</strong> <small>{{client ? client.telephone : "---"}}</small></span>
-    <span><strong>Nombre:</strong>  <small>{{client ? client.name : "---"}}</small></span>
-    </div>
-    <div class="adress-info">
-      <span><strong>Dirección:</strong>  <small>{{client ? client.adress : "---"}}</small></span>
-    <span><strong>Entre calles:</strong> <small> {{client ? client.street1 : "---"}} y {{client ? client.street2 : "---"}}</small></span>
-    </div>
-
-    <div class="actions">
-      <div matTooltip="Ver historial" (click)="openClientHistorial()" class="action">
-
+        <div class="client-info">
+          <div class="contact-info">
+            <span>
+              <mat-icon>phone</mat-icon> <strong>Numero de telefono: </strong>
+              <span>{{ client ? client.telephone : "---" }}</span></span
+            >
+            <span
+              ><mat-icon>person</mat-icon> <strong>Nombre: </strong>
+              <span>{{ client ? client.name : "---" }}</span></span
+            >
+            <span>
+              <mat-icon> place</mat-icon> <strong>Dirección :</strong>
+              <span>{{ client ? client.adress : "---" }}</span></span
+            >
+            <span
+              ><mat-icon> map</mat-icon> <strong>Entre calles: </strong>
+              <span>
+                {{ client ? client.street1 : "---" }} y
+                {{ client ? client.street2 : "---" }}</span
+              ></span
+            >
+          </div>
+          <div class="actions">
+            <button
+              matTooltip="Ver historial"
+              (click)="openClientHistorial()"
+              class="action"
+              [disabled]="!client"
+            >
+              <img src="../../assets/images/historial.svg" alt="" />
+            </button>
+            <button
+              matTooltip="Editar Cliente"
+              class="action"
+              [disabled]="!client"
+            >
+              <img src="../../assets/images/edit-client.svg" alt="" />
+            </button>
+            <button
+              matTooltip="Eliminar Cliente"
+              class="action delete"
+              [disabled]="!client"
+            >
+              <img src="../../assets/images/delete-client.svg" alt="" />
+            </button>
+            <button matTooltip="Nuevo Cliente" class="action create">
+              <img src="../../assets/images/create-client.svg" alt="" />
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="action">
-
-      </div>
     </div>
-    
-    
 
-  </div>
- 
-      </div>
-    </div>
-    
     <div class="dashboard-tools">
-    <div class="tool">Generar Pedido</div>
-    <div class="tool">Cancelar Pedido</div>
-    <div class="tool"></div>
+      <div class="tool generate">
+        <img src="../../assets/images/check.svg" alt="" />
+        <span>Generar Pedido</span>
+      </div>
+      <div class="tool cancel">
+        <img src="../../assets/images/close.svg" alt="" />
+        <span>Cancelar Pedido</span>
+      </div>
     </div>
   </div>
-  
 </ng-container>
-<ng-template #noClients>
-  No se encuentra el cliente
-</ng-template>
+<ng-template #noClients> No se encuentra el cliente </ng-template>

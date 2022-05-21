@@ -1,96 +1,91 @@
 <ng-container *ngIf="(dataSource$ | async) as dataSource;else loading">
-  <table mat-table
-  [dataSource]="dataSource" multiTemplateDataRows
-  class="mat-elevation-z8">
-  <!-- Position Column -->
-  <ng-container matColumnDef="date">
-    <th mat-header-cell *matHeaderCellDef > Fecha</th>
-    <td  mat-cell *matCellDef="let element" ><span>{{element.date | date: "EEEE, d  MMMM , y, h:mm:ss a" }}</span>  </td>
-  </ng-container>
+  <div class="bread-crumb">
+    <h3>Información del cliente: {{client.name}}</h3>
+    <h2>({{client.telephone}})</h2>
+  </div>
+  <div class="compras">
+    Cantidad de compras {{dataSource.length}}
+  </div>
+  <table class="table grid">
+    <tr>
+      <th>Fecha</th>
+      <th>Total Compra</th>
+      <th class="w-250">Pago con:</th>
+      <th class="w-250">Vuelto de:</th>
+      <th>Ver Detalle</th>
 
-  <!-- Name Column -->
-  <ng-container matColumnDef="total">
-    <th class="center" mat-header-cell *matHeaderCellDef> Total Compra</th>
-    <td class="center" mat-cell *matCellDef="let element"> <span>{{element.total}}</span>  </td>
-  </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container matColumnDef="pay">
-    <th class="center" mat-header-cell *matHeaderCellDef> Pago con:</th>
-    <td class="center" mat-cell *matCellDef="let element"> <span>{{element.pay}}</span> </td>
-  </ng-container>
+    </tr>
+    <tr *ngFor="let historial of dataSource; let index = index" [ngClass]="{'collapsed': collapsedStates[index]}">
+      <td style="display: flex;">
+        {{historial.date | date: "EEEE, MMMM d, y, h:mm:ss"}}
+      </td>
+      <td>{{historial.total}}</td>
+      <td>{{historial.pay}}</td>
+      <td>{{historial.turned}}</td>
+      <td>
 
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="turned">
-    <th class="center" mat-header-cell *matHeaderCellDef> Vuelto de:</th>
-    <td class="center" mat-cell *matCellDef="let element"> <span>{{element.turned}}</span>  </td>
-  </ng-container>
+        <div class="trigger" (click)="collapsedRow(index);getHistorialDetail(historial.num_cant)"
+          *ngIf="!recomendationMode">
+          <img class="ver-mas" [ngClass]="{'up-arrow': collapsedStates[index]}"
+            src="../../../../../assets/images/chevron.svg" alt="">
+        </div>
+      </td>
 
-  <ng-container matColumnDef="action">
-    <th class="center" mat-header-cell *matHeaderCellDef> Ver Detalle</th>
-    <td class="center" mat-cell *matCellDef="let element;let index = index">
-      <span>
-        <img width="20px" (click)="getHistorialDetail(element.num_cant)" src="../../../../../assets/images/chevron.svg" alt="">
-      </span>
-    </td>
-  </ng-container>
+      <ng-container *ngIf="(historialDetails$.get(historial.num_cant)) | async as details;else loader">
+        <div class="mini-card-container">
+          <ng-container *ngFor="let detail of details">
+            <ng-container *ngIf="detail">
+              <div class="product-item">
 
-<!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
-<ng-container matColumnDef="expandedDetail">
-<td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
- <div class="example-element-detail"
-      [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-   <div class="info">
-     <ng-container *ngIf="(historialDetail$ | async) as details;else loadingDetail">
-       <div class="info">details</div>
-     </ng-container>
-     <ng-template #loadingDetail>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            
-            <span>Cargando</span>
-            <mat-progress-spinner
-              class="example-margin"
-              color="primary"
-              mode="indeterminate"
-              >
-          </mat-progress-spinner>
+                <div class="img-container" >
+                  <img [src]="'../../../../assets/images/' + traduceCod(detail.product) +'.svg'" alt="">
+                </div>
+                <div class="flavours">
+                  <div class="flavour-item" *ngFor="let flavour of detail.flavours">
+                    {{diccionary('flavour',flavour.item)}}
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+
+          </ng-container>
+
+        </div>
+
+      </ng-container>
+
+      <ng-template #loader>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+
+              <span>Cargando</span>
+              <mat-progress-spinner class="example-margin" color="primary" mode="indeterminate">
+              </mat-progress-spinner>
+            </div>
           </div>
         </div>
-      </div>
-      </ng-template>
-   </div>
- </div>
-</td>
-</ng-container>
 
-<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-<tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
- class="example-element-row"
- [class.example-expanded-row]="expandedElement === element"
- (click)="expandedElement = expandedElement === element ? null : element">
-</tr>
-<tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
-</table>
+
+      </ng-template>
+
+    </tr>
+  </table>
 </ng-container>
 
 <ng-template #loading>
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
-        
+
         <span>Cargando</span>
-        <mat-progress-spinner
-          class="example-margin"
-          color="primary"
-          mode="indeterminate"
-          >
-      </mat-progress-spinner>
+        <mat-progress-spinner class="example-margin" color="primary" mode="indeterminate">
+        </mat-progress-spinner>
       </div>
     </div>
   </div>
-  </ng-template>
+</ng-template>
 
 
 

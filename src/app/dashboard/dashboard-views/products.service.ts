@@ -36,8 +36,6 @@ export class ProductsService {
     this.delivery[product.type.toLowerCase()+'s'].push(product)
     else
       this.delivery.additionals[product.cod] +=1;
-      
-    console.log(this.delivery)
   }
 
   addFlavour(index:number,flavour:string){

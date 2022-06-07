@@ -12,6 +12,9 @@
               placeholder="Ingrese número de telefono..."
               [formControl]="clientControl"
             />
+            <button class="cancel" *ngIf="clientControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="clientControl.setValue('')">
+              <mat-icon>close</mat-icon>
+            </button>
           </mat-form-field>
         </div>
         <div class="row">
@@ -21,7 +24,7 @@
       </div>
     </div>
     <div class="col-8">
-      <app-dashboard [client]="selectedClient"></app-dashboard>
+      <app-dashboard [client]="selectedClient" (resetClient)="resetClient()"></app-dashboard>
       <app-products></app-products>
     </div>
   </div>

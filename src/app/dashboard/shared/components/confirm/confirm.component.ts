@@ -12,7 +12,6 @@ export class ConfirmComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,) { }
 
   ngOnInit() {
-    console.log(this.data)
   }
 
   cancel(){

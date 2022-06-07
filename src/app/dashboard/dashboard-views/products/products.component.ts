@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
   
   ngOnInit() {
     this.products$ = this.productsService.getDeliveryProducts();
-    this.products$.subscribe(products =>{this.showProducts=products,console.log(products)})
+    this.products$.subscribe(products =>{this.showProducts=products})
   }
 
   addUnit(unit:any){console.log(unit)}
@@ -48,7 +48,6 @@ export class ProductsComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(
       res => {
-        console.log(res)
         if (res.status)
           this.productsService.setFlavours(res.index,res.flavours)
       }

@@ -1,6 +1,11 @@
 <div class="container-fluid">
   <div class="row">
-    <h2>Alta de clientes</h2>
+    <ng-container *ngIf="!data.edit;else editTitle">
+      <h2>Alta de clientes</h2>
+    </ng-container>
+    <ng-template #editTitle>
+      <h2>Editando cliente {{data.client.telephone}}</h2>
+    </ng-template>
   </div>
   <div class="row">
     <form [formGroup]="clientControl">
@@ -49,6 +54,22 @@
         </div>
      
       </div>
+
+      <button mat-rised-button type="button" class="btn btn-outline-primary create-client" [disabled]="!clientControl.valid" (click)="!data.edit ? addClient() : editClient()">
+        <ng-container *ngIf="!loadPostClient;else loading">
+          <ng-container *ngIf="!data.edit;else edit">
+            Crear cliente
+          </ng-container>
+          <ng-template #edit>
+            Editar Cliente
+          </ng-template>
+        </ng-container>
+        <ng-template #loading>
+          <div class="d-flex justify-content-center">
+            <mat-spinner [diameter]="20"></mat-spinner>
+          </div>
+        </ng-template>
+      </button>
     </form>
   </div>
    

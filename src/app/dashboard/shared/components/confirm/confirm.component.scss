@@ -1,0 +1,43 @@
+@import '../../../../../assets/css/color-pallete.scss';
+.buttons{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    button{
+        color: #222222;
+    }
+}
+
+.message{
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel{
+    background: url(../../../../../assets/images/close.svg);
+    background-color: $grape;
+    background-repeat: no-repeat;
+    background-position: 143%;
+    background-blend-mode: soft-light;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        background-position: 140%;
+        background-blend-mode: hard-light;
+    }
+}
+.accept{
+    background: url(../../../../../assets/images/check.svg);
+    background-color: $kiwi;
+    background-repeat: no-repeat;
+    background-position: 143%;
+    background-blend-mode: soft-light;
+    transition: 0.5s ease-in-out;
+    &:hover{
+        background-position: 140%;
+        background-blend-mode: hard-light;
+    }
+
+}

@@ -102,7 +102,6 @@ export class ClientHistorialComponent {
         []
       )
     );
-    history.subscribe(console.log)
     this.historialDetails$.set(id,history)
   }
 
@@ -128,10 +127,6 @@ export class ClientHistorialComponent {
     }
     this.collapsedStates[index] = true
     }
-
-    
-
-    console.log(this.collapsedStates)
   }
   
 }

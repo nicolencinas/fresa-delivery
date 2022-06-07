@@ -34,7 +34,7 @@ exports.updateSingle = (req, res) => {
     const { id } = req.params
     const body = req.body
     model.updateOne(
-        { _id: parseId(id) },
+        { telephone: id },
         body,
         (err, docs) => {
             res.send({
@@ -68,10 +68,13 @@ exports.insertData = (req, res) => {
 exports.deleteSingle = (req, res) => {
     const { id } = req.params
     model.deleteOne(
-        { _id: parseId(id) },
+        { telephone: id },
         (err, docs) => {
+            if (err){
+                res.status(422.).send({error:"No se logro crear el cliente solicitado. Reintente nuevamente"})
+            }
             res.send({
-                items: docs
+                result:"Se creo el cliente correctamente"
             })
         })
 }

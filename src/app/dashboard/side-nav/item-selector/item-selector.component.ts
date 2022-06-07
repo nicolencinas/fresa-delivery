@@ -17,7 +17,6 @@ export class ItemSelectorComponent implements OnInit {
   ngOnInit() 
   {
     this.products$ = this.products.getAvailableProducts();
-    this.products$.subscribe(console.log)
   }
 
   addProduct(product:Product){

@@ -38,17 +38,20 @@
               matTooltip="Editar Cliente"
               class="action"
               [disabled]="!client"
+              (click)="openEditClient()"
             >
               <img src="../../assets/images/edit-client.svg" alt="" />
             </button>
             <button
               matTooltip="Eliminar Cliente"
+              (click)="openConfirmDelete(client.telephone)"
+
               class="action delete"
               [disabled]="!client"
             >
               <img src="../../assets/images/delete-client.svg" alt="" />
             </button>
-            <button matTooltip="Nuevo Cliente" class="action create">
+            <button matTooltip="Nuevo Cliente" class="action create" (click)="openABM()">
               <img src="../../assets/images/create-client.svg" alt="" />
             </button>
           </div>

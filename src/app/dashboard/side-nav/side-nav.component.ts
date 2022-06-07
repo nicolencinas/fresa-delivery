@@ -25,15 +25,12 @@ export class SideNavComponent implements OnInit {
   }
   getClients() {
     this.clientService.getClients().subscribe((res:any)=>{this.clients = res})
-    console.log(this.clients)
-      
   }
 
   validateClient(){
 
     this.clientService.getClientByID(this.clientControl.value).subscribe(
       client =>{
-        console.log(client)
         if (client){
           this.selectedClient = client
           this.openSnackBar('Se obtuvo el cliente con el numero '+client.telephone,"Aceptar",['success'])
@@ -46,6 +43,10 @@ export class SideNavComponent implements OnInit {
          }
       }
     )
+  }
+
+  resetClient(){
+    this.validateClient()
   }
 
   openSnackBar(message:string,action:string,panelClass?:any) {
@@ -88,18 +89,22 @@ export class SideNavComponent implements OnInit {
     const dialogRef = this.dialog.open(ClientsAbmComponent, {
       width: '600px',
       data:{
-        telephone:this.clientControl.value
+        telephone:this.clientControl.value,
+        edit:false
       }
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result){
+        this.resetClient()
       } else {
 
       }
 
     });
   }
+
+
 
 }
 

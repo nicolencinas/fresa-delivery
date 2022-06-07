@@ -22,11 +22,9 @@ export class FlavoursSelectorComponent implements OnInit {
 
   ngOnInit() {
     this.getFlavours();
-    console.log(this.index)
   }
  getFlavours() {
   this.flavours$ = this.flavourService.getAvailableFlavours();
-  this.flavours$.subscribe(console.log)
   }
 
   addFlavour(flavour:Flavour) {

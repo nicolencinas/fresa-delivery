@@ -17,12 +17,13 @@ export class ItemSelectorComponent implements OnInit {
   ngOnInit() 
   {
     this.products$ = this.products.getAvailableProducts();
+    console.log(this.products.delivery)
   }
 
   addProduct(product:Product){
-    // const prd = Object.assign({},product) 
-    // prd.flavours = [];
-    // this.products.addProduct(prd)
+    const prd = Object.assign({},product) 
+    prd.flavours = [];
+    this.products.addProduct(prd)
   } 
 
 }

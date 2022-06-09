@@ -29,8 +29,8 @@ export class ProductsComponent implements OnInit {
 
   
   ngOnInit() {
-    this.products$ = this.productsService.getDeliveryProducts();
-    this.products$.subscribe(products =>{this.showProducts=products})
+    this.showProducts= this.productsService.getDeliveryProducts();
+    //this.products$.subscribe(products =>{this.showProducts=products})
   }
 
   addUnit(unit:any){console.log(unit)}

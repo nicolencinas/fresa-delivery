@@ -1,3 +1,4 @@
+import { ProductsService } from './../dashboard-views/products.service';
 import { ClientService } from '../shared/components/clients-abm/client.service';
 import { ConfirmComponent } from '../shared/components/confirm/confirm.component';
 import { ClientsAbmComponent } from '../shared/components/clients-abm/clients-abm.component';
@@ -18,7 +19,7 @@ export class SideNavComponent implements OnInit {
   selectedClient: any;
   
 
-  constructor(private dialog:MatDialog,private clientService:ClientService,private _snackBar: MatSnackBar) { }
+  constructor(private dialog:MatDialog,private clientService:ClientService,private _snackBar: MatSnackBar,private productService:ProductsService) { }
 
   ngOnInit() {
     //this.getClients()
@@ -33,6 +34,7 @@ export class SideNavComponent implements OnInit {
       client =>{
         if (client){
           this.selectedClient = client
+          this.productService.setClient(client)
           this.openSnackBar('Se obtuvo el cliente con el numero '+client.telephone,"Aceptar",['success'])
          }
          else{

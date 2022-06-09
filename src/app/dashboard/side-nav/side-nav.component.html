@@ -1,9 +1,18 @@
 <div class="container-fluid">
+
   <div class="row">
     <div class="col-4" style="padding-left: 0 !important;">
-        <div class="side-nav">
+        <div class="side-nav"> 
+          <div class="row">
+            <div class="img-container">
+              <img src="../../../assets/images/fresa-delivery.svg" alt="">
+            </div>
+  </div>
         <div class="row">
-          <mat-form-field class="example-form-field" appearance="fill">
+          <div class="bread-crumb">
+            <h2>Clientes</h2>
+          </div>
+          <mat-form-field class="example-form-field" appearance="fill" style="margin-top: 0.8em;">
             <mat-label>Numero de télefono</mat-label>
             <input
               matInput
@@ -18,7 +27,9 @@
           </mat-form-field>
         </div>
         <div class="row">
-          <h2 class="title">Seleccione sus productos</h2>
+          <div class="bread-crumb">
+            <h2>Seleccione sus productos</h2>
+          </div>
           <app-item-selector></app-item-selector>
         </div>
       </div>

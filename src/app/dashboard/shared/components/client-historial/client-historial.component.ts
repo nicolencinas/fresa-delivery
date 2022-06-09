@@ -70,21 +70,6 @@ export class ClientHistorialComponent {
   }
 
   getHistorialDetail(id:number) {
-    
-    // const groupBy = (data, keyFn) => data.reduce((agg, item) => {
-    //   const group = keyFn(item);
-    //   agg[group] = [...(agg[group] || []), item];
-    //   console.log(agg)
-    //   return agg
-    // }, []);
-    
-    // const history=this.historialDetail.getHistoryDetail(id).pipe(
-    //   map(data => groupBy(data, item => item.order)),
-    //   // tap(result => result.shift())
-    // )
-    // history.subscribe(console.log)
-    // this.historialDetails$.set(id,history);
-
     const history = this.historialDetail.getHistoryDetail(id).pipe(
       mergeMap((historiales: any) => historiales),
       groupBy((historial: any) =>

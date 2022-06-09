@@ -1,3 +1,5 @@
+import { TicketComponent } from './dashboard-views/ticket/ticket.component';
+import { ProductsService } from './dashboard-views/products.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClientService } from './shared/components/clients-abm/client.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -5,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ClientHistorialComponent } from './shared/components/client-historial/client-historial.component';
 import { ConfirmComponent } from './shared/components/confirm/confirm.component';
 import { ClientsAbmComponent } from './shared/components/clients-abm/clients-abm.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +20,7 @@ export class DashboardComponent implements OnInit {
   @Output() resetClient:EventEmitter<boolean> = new EventEmitter()
   clientStatus:boolean;
 
-  constructor(private dialog:MatDialog,private clientService:ClientService,private _snackbar:MatSnackBar) { }
+  constructor(private dialog:MatDialog,private clientService:ClientService,private _snackbar:MatSnackBar,private router:Router,private productService:ProductsService) { }
 
   ngOnInit() {
     this.clientStatus = this.client !== undefined
@@ -111,6 +114,12 @@ export class DashboardComponent implements OnInit {
       }
 
     });
+  }
+
+  generateOrder(){
+    const url = this.router.serializeUrl(this.router.createUrlTree(['ticket']));
+    window.open(url, '_blank'); 
+   
   }
 
 }

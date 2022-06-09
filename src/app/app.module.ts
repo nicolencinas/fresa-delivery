@@ -1,3 +1,5 @@
+import { ProductsService } from './dashboard/dashboard-views/products.service';
+import { TicketComponent } from './dashboard/dashboard-views/ticket/ticket.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FlavoursSelectorComponent } from './dashboard/shared/components/flavours-selector/flavours-selector.component';
 import { ClientHistorialComponent } from './dashboard/shared/components/client-historial/client-historial.component';
@@ -39,7 +41,8 @@ registerLocaleData(localeEsAr, 'es-AR');
     ProductsComponent,
     ClientsAbmComponent,
     ClientHistorialComponent,
-    FlavoursSelectorComponent
+    FlavoursSelectorComponent,
+    TicketComponent
    ],
   imports: [
     BrowserModule,
@@ -61,7 +64,8 @@ registerLocaleData(localeEsAr, 'es-AR');
     MatSnackBarModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: "es-AR" }, //replace "en-US" with your locale
+    { provide: LOCALE_ID, useValue: "es-AR" },
+    ProductsService   //replace "en-US" with your locale
     //otherProviders...
   ],
   bootstrap: [AppComponent]

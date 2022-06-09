@@ -1,5 +1,5 @@
 <ng-container>
-  <div class="container-fluid" style="margin-top: 2em">
+  <div class="container-fluid" style="margin-top: 2em" >
     <div class="row">
       <div class="col-12">
         <h2>Informacion del cliente</h2>
@@ -60,8 +60,8 @@
     </div>
 
     <div class="dashboard-tools">
-      <div class="tool generate">
-        <img src="../../assets/images/check.svg" alt="" />
+      <div class="tool generate" (click)="generateOrder()">
+        <img src="../../assets/images/check.svg" alt=""  />
         <span>Generar Pedido</span>
       </div>
       <div class="tool cancel">

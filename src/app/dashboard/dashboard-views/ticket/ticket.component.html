@@ -1,0 +1,48 @@
+<div class="d-flex w-100 justify-content-center flex-column">
+<div class="ticket" id="print">
+  <div class="img-container">
+    <img  src="../.../../../../../assets/images/fresa..svg" alt="">
+  </div>
+  <div class="row">
+    <div class="content">
+  <img class="separator" src="../../../../assets/images/separator.svg" alt="">
+
+  <span> <strong>• Direccion:</strong>{{products.client.adress}}</span>
+  <span> <strong>• Entre calles:</strong> {{(products.client.street1 ? products.client.street1 : '---') + ' y ' + (products.client.street2 ? products.client.street2: '---')}}  </span>
+  <span> </span> 
+  <span> <strong>• Nombre: </strong>{{products.client.name}} </span>
+  <span> <strong>• Telefono: </strong>{{products.client.telephone}} </span>
+  <img class="separator" src="../../../../assets/images/separator.svg" alt="">
+
+  <ng-container *ngFor="let product of products.products">
+    <div class="product-title"> <span> {{product.detail}} </span> <span>{{product.price}} $</span> </div>
+  <div class="flavours">
+    <span *ngFor="let flavour of product.flavours">
+      {{flavour.description}}
+    </span>
+  </div>
+  <img class="separator" src="../../../../assets/images/separator.svg" alt="">
+  </ng-container>
+
+
+  <div class="prices">
+    <div class="total"> <strong>Total:</strong> <span>{{total}} $</span>  </div>
+    <div class="pay">
+      <strong>Paga con:</strong> <span>{{pay}} $</span> 
+    </div>
+    <div class="return">
+      <strong>Vuelto de:</strong> <span>{{turned}}$</span> 
+    </div>
+  </div>
+    </div>
+  
+  </div>
+  
+
+</div>
+<div class="options" (click)="ki()">
+  
+</div>
+</div>
+
+

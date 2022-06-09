@@ -1,3 +1,4 @@
+import { TicketComponent } from './dashboard/dashboard-views/ticket/ticket.component';
 import { SideNavComponent } from './dashboard/side-nav/side-nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClientsComponent } from './components/clients/clients.component';
@@ -7,7 +8,11 @@ import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path:"",
-  component:SideNavComponent
+  component:SideNavComponent,
+},
+
+{path:"ticket",
+  component:TicketComponent,
 }
 ];
 
